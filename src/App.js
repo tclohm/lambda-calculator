@@ -24,11 +24,12 @@ function App() {
   const [operatorInput, setOperatorInput] = useState(undefined);
 
   const changeOutput = (number, previousNumber="0") => {
-    if(previousNumber == "0" && number != "0") {
-      setOutput(number);
-    } else {
-      setOutput(previousNumber+number);
-    }
+    // if(previousNumber == "0" || number != "0") {
+    //   setOutput(number);
+    // } else {
+    //   setOutput(previousNumber+number);
+    // }
+    setOutput(number+previousNumber)
   }
 
   const mutate = (number, previousNumber, operator) => {
