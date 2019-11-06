@@ -6,7 +6,9 @@
     border: 2px solid grey;
     padding-bottom: 25px;
 }
+
 .display {
+    margin-left: 1.5rem;
     margin-top: 25px;
     height: 100px;
     width: 450px;
@@ -19,4 +21,68 @@
     align-items: flex-end;
     padding-right: 8%;
     font-size: 5.0rem;
-  }
+}
+
+.logo-container {
+    margin: 1.5rem 0 0 1.5rem;
+}
+
+.button-container {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.left-side {
+    display: flex;
+    flex-direction: column;
+}
+
+.right-side {
+    display: flex;
+}
+
+.left {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.right {
+    max-height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+}
+
+.btn-numbers {
+    color: white;
+    background: midnightblue;
+    border-radius: 4rem;
+    border: 0 solid transparent;
+    border-bottom: 0.2rem solid black;
+    margin: 1rem;
+    padding: 2.3rem 2.4rem;
+    font-size: 2rem;
+    /*width: 15%;*/
+
+    text-align: center;
+    line-height: 2rem;
+}
+
+.specials {
+    background: steelblue;
+
+}
+
+.operators {
+    background: darkcyan;
+    line-height: 2rem;
+    text-align: center;
+    line-height: 2rem;
+}
+
+.zero {
+    width: 52%;
+}
