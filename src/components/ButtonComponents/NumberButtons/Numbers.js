@@ -12,7 +12,8 @@ import { numbers } from '../../../data'
 export const Numbers = (props) => {
   // STEP 2 - add the imported data to state
   const [number, setNumber] = useState(data.numbers);
-  const {currentOperator, currentSelected, previousSelected, output} = props;
+  const {output, numberInput, previousInput, numberFunction} = props;
+
   return (
     <div className="left">
       {/* STEP 3 - Use .map() to iterate over your array data and return a button
@@ -20,7 +21,29 @@ export const Numbers = (props) => {
        it any props needed by the child component*/}
        {number.map((num, index) => (
 
-          num == "0" ? <NumberButton className="btn-numbers zero" key={index} number={num} currentOperator={currentOperator} currentSelected={currentSelected} previousSelected={previousSelected} output={output}/> : <NumberButton className="btn-numbers" key={index} number={num} currentOperator={currentOperator} currentSelected={currentSelected} previousSelected={previousSelected} output={output}/>
+          num === "0" ? 
+            <NumberButton 
+
+            className="btn-numbers zero" 
+            key={index} number={num} 
+            output={output} 
+            numberInput={numberInput} 
+            previousInput={previousInput} 
+            numberFunction={numberFunction}
+            
+            /> :
+             
+            <NumberButton
+
+            className="btn-numbers" 
+            key={index} 
+            number={num} 
+            output={output} 
+            numberInput={numberInput} 
+            previousInput={previousInput} 
+            numberFunction={numberFunction}
+            
+            />
 
        	))}
     </div>
